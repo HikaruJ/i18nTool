@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Bogus" Version="27.0.1" />
+    <PackageReference Include="Karambolo.PO" Version="1.5.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.2.0" />
+    <PackageReference Include="RateLimiter" Version="1.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Infrastructure\i18n.Infrastructure.Entities\i18n.Infrastructure.Entities.csproj" />
+    <ProjectReference Include="..\..\GetText\i18n.Services.GetText.Data\i18n.Services.GetText.Data.csproj" />
+    <ProjectReference Include="..\..\GetText\i18n.Services.GetText.Entities\i18n.Services.GetText.Entities.csproj" />
+    <ProjectReference Include="..\..\Parsers\i18n.Services.Parsers.Data\i18n.Services.Parsers.Data.csproj" />
+    <ProjectReference Include="..\..\Parsers\i18n.Services.Parsers.Entities\i18n.Services.Parsers.Entities.csproj" />
+    <ProjectReference Include="..\i18n.Services.Translator.Data\i18n.Services.Translator.Data.csproj" />
+    <ProjectReference Include="..\i18n.Services.Translator.Entities\i18n.Services.Translator.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <ApplicationIcon />
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Karambolo.PO" Version="1.5.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\i18n.Services.GetText.Data\i18n.Services.GetText.Data.csproj" />
+    <ProjectReference Include="..\i18n.Services.GetText.Entities\i18n.Services.GetText.Entities.csproj" />
+    <ProjectReference Include="..\..\..\Infrastructure\i18n.Infrastructure.Entities\i18n.Infrastructure.Entities.csproj" />
+    <ProjectReference Include="..\..\..\Infrastructure\i18n.Infrastructure\i18n.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

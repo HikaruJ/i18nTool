@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <StartupObject>i18n.Program</StartupObject>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser" Version="2.5.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="2.2.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="2.1.1" />
+    <PackageReference Include="Serilog.Sinks.File" Version="4.0.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\Services\GetText\i18n.Services.GetText\i18n.Services.GetText.csproj" />
+    <ProjectReference Include="..\..\Services\Parsers\i18n.Services.Parsers.Entities\i18n.Services.Parsers.Entities.csproj" />
+    <ProjectReference Include="..\..\Services\Parsers\i18n.Services.Parsers\i18n.Services.Parsers.csproj" />
+    <ProjectReference Include="..\..\Services\Translator\i18n.Services.Translator\i18n.Services.Translator.csproj" />
+    <ProjectReference Include="..\i18n.App.Entites\i18n.App.Entites.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\i18n.Infrastructure\i18n.Infrastructure.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Update="sample\long.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="longtext.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="sample\partial.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
