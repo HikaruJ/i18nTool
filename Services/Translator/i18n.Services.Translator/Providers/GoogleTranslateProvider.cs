@@ -61,7 +61,10 @@ namespace i18n.Services.Translator.Providers
                 else
                 {
                     if (_currentRequestCharacterCount + _totalRequestsCharacterCount >= _maxCharactersPer100Seconds)
+                    {
                         Thread.Sleep(TimeSpan.FromSeconds(100));
+                        _totalRequestsCharacterCount = 0; // Reset the count of requests
+                    }
 
                     response = _googleTranslateMock.TranslateText(sourceLanguage, targetLanguage, _request);
                     _translateResponses.Add(response);
@@ -75,8 +78,11 @@ namespace i18n.Services.Translator.Providers
             }
 
             // Handle any leftover request
-            response = _googleTranslateMock.TranslateText(sourceLanguage, targetLanguage, _request);
-            _translateResponses.Add(response);
+            if (_request.Any())
+            {
+                response = _googleTranslateMock.TranslateText(sourceLanguage, targetLanguage, _request);
+                _translateResponses.Add(response);
+            }
 
             var lastIndex = 0;
             IOrderedDictionary<string, string> translatedTextDict = new OrderedDictionary<string, string>();
