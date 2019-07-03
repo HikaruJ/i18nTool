@@ -1,8 +1,7 @@
 {
   "profiles": {
     "i18n.App": {
-      "commandName": "Project",
-      "commandLineArgs": "-p \"sample/long.html\" -t \"ko\""
+      "commandName": "Project"
     }
   }
 }
