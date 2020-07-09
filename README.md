@@ -1,4 +1,4 @@
-# i18n
+# i18n (C#)
 A tool for parsing and translating HTML files (including creation of PO/POT that translators can use)
 
 ## Usage
